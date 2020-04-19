@@ -21,16 +21,10 @@ function onError(id) {
     console.log(`Sucedio un error al obtener el personaje ${id}`)
 }
 
-for (var i = 0; i < 999; i++) {
+for (var i = 1; i <= 999; i++) {
     obtenerPokemon(i)
         .then(function (pokemon){
         console.log(`El personaje ${pokemon.id} es ${pokemon.name}`)
         })
         .catch(onError);
 }
-
-// obtenerPokemon(1)
-//     .then(function (pokemon){
-//         console.log(`El personaje 1 es ${pokemon.name}`)
-//     })
-//     .catch(onError);
